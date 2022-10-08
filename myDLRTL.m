@@ -1,4 +1,4 @@
-function [cls,Acc,A,M,obj1]=myDLRTL(gnd,Xs,Xt,Yt_pre,options,test_data,test_label)
+function [cls,Acc,A,M,obj1]=myTDLR(gnd,Xs,Xt,Yt_pre,options,test_data,test_label)
 options1 = [];
 options1.knn = options.knn;
 options1.alfa = options.alfa ;
@@ -8,7 +8,7 @@ options1.gamma = options.gamma;
 options1.u1 = options.u1;
 options1.u2 = options.u2;
 for i=1:10
-    [A,M,obj]=DLRTL(gnd,Xs,Xt,Yt_pre,options1);
+    [A,M,obj]=TDLR(gnd,Xs,Xt,Yt_pre,options1);
     obt_label=Xt'*A;
     con=size(obt_label,2);
     [g1,g2]=sort(obt_label,2);
@@ -28,7 +28,7 @@ end
 
 
 
-function [A,M,obj]=DLRTL(gnd,Xs,Xt,Yt_pre,options)
+function [A,M,obj]=TDLR(gnd,Xs,Xt,Yt_pre,options)
 %% X(nXm);Y(nXc);A(mXc);||XA-Y-B.*M||+lambda*Tr(A'*X'*L*XA)
 %%
 knn = options.knn;
