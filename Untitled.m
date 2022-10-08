@@ -15,7 +15,7 @@ for i = [1:1:1]
 %     Ttest_Label = double(label(225:end,:));
 %     
 % %     X = [double(feature),double(label)];
-% %     rowrank = randperm(size(X, 1)); % size»ñµÃaµÄĞĞÊı£¬randperm´òÂÒ¸÷ĞĞµÄË³Ğò
+% %     rowrank = randperm(size(X, 1)); % sizeè·å¾—açš„è¡Œæ•°ï¼Œrandpermæ‰“ä¹±å„è¡Œçš„é¡ºåº
 % %     X1 = X(rowrank,:); 
 % %     T = X1(1:224,1:1582);
 % %     T_Label = X1(1:224,1583);
@@ -41,18 +41,18 @@ load('bauma_label.mat');
 % load('enterface_1582.mat');
 %     T = double(feature(1:704,:));
 %     Ttest= double(feature(705:end,:));
-% %     [M,N]=size(feature); %¶ÁÈ¡¾ØÕóĞĞÁĞÊı;
-% %     num = round(M*(7/10)); % È¡AµÄ1/3ĞĞ×÷ÎªÑµÁ·¼¯£¬roundÎªËÄÉáÎåÈëÈ¡Õû;
-% %     [~,idx]=sort(rand(M,1));%Ëæ»úÅÅÁĞÉú³Éindex;
-% %     T=double(feature(idx(1:num),:));%¸ù¾İindexÑ¡È¡1/3µÄA¼¯ÎªB¼¯;
-% %     Ttest=double(feature(idx(num+1:M),:));%±£´æÊ£ÓàµÄÊı¾İÎªC¼¯;
+% %     [M,N]=size(feature); %è¯»å–çŸ©é˜µè¡Œåˆ—æ•°;
+% %     num = round(M*(7/10)); % å–Açš„1/3è¡Œä½œä¸ºè®­ç»ƒé›†ï¼Œroundä¸ºå››èˆäº”å…¥å–æ•´;
+% %     [~,idx]=sort(rand(M,1));%éšæœºæ’åˆ—ç”Ÿæˆindex;
+% %     T=double(feature(idx(1:num),:));%æ ¹æ®indexé€‰å–1/3çš„Aé›†ä¸ºBé›†;
+% %     Ttest=double(feature(idx(num+1:M),:));%ä¿å­˜å‰©ä½™çš„æ•°æ®ä¸ºCé›†;
 % load('bauma_label.mat'); 
 %     S_Label=double(label);
 % load('enterface_label.mat');
 %     T_Label=double(label(1:704,:));
 %     Ttest_Label = double(label(705:end,:));
-% %     T_Label=double(label(idx(1:num),:));%¸ù¾İindexÑ¡È¡1/3µÄA¼¯ÎªB¼¯;
-% %     Ttest_Label=double(label(idx(num+1:M),:));%±£´æÊ£ÓàµÄÊı¾İÎªC¼¯;
+% %     T_Label=double(label(idx(1:num),:));%æ ¹æ®indexé€‰å–1/3çš„Aé›†ä¸ºBé›†;
+% %     Ttest_Label=double(label(idx(num+1:M),:));%ä¿å­˜å‰©ä½™çš„æ•°æ®ä¸ºCé›†;
 
 % %enter-bauma  42.30 knn/5 alfa/1.0 lambda/10^3 beta/150 gamma/10 u1/0.01 u2/0.001 dim/100
 
@@ -61,18 +61,18 @@ load('bauma_label.mat');
 % load('bauma_1582.mat');
 %     T = double(feature(1:121,:));
 %     Ttest= double(feature(122:end,:));
-% % [M,N]=size(feature); %¶ÁÈ¡¾ØÕóĞĞÁĞÊı;
-% % num = round(M*(7/10)); % È¡AµÄ1/3ĞĞ×÷ÎªÑµÁ·¼¯£¬roundÎªËÄÉáÎåÈëÈ¡Õû;
-% % [~,idx]=sort(rand(M,1));%Ëæ»úÅÅÁĞÉú³Éindex;
-% % T=double(feature(idx(1:num),:));%¸ù¾İindexÑ¡È¡1/3µÄA¼¯ÎªB¼¯;
-% % Ttest=double(feature(idx(num+1:M),:));%±£´æÊ£ÓàµÄÊı¾İÎªC¼¯;
+% % [M,N]=size(feature); %è¯»å–çŸ©é˜µè¡Œåˆ—æ•°;
+% % num = round(M*(7/10)); % å–Açš„1/3è¡Œä½œä¸ºè®­ç»ƒé›†ï¼Œroundä¸ºå››èˆäº”å…¥å–æ•´;
+% % [~,idx]=sort(rand(M,1));%éšæœºæ’åˆ—ç”Ÿæˆindex;
+% % T=double(feature(idx(1:num),:));%æ ¹æ®indexé€‰å–1/3çš„Aé›†ä¸ºBé›†;
+% % Ttest=double(feature(idx(num+1:M),:));%ä¿å­˜å‰©ä½™çš„æ•°æ®ä¸ºCé›†;
 % load('enterface_label.mat'); 
 %     S_Label=double(label);
 % load('bauma_label.mat');
 %     T_Label=double(label(1:121,:));
 %     Ttest_Label = double(label(122:end,:));
-% % T_Label=double(label(idx(1:num),:));%¸ù¾İindexÑ¡È¡1/3µÄA¼¯ÎªB¼¯;
-% % Ttest_Label=double(label(idx(num+1:M),:));%±£´æÊ£ÓàµÄÊı¾İÎªC¼¯;
+% % T_Label=double(label(idx(1:num),:));%æ ¹æ®indexé€‰å–1/3çš„Aé›†ä¸ºBé›†;
+% % Ttest_Label=double(label(idx(num+1:M),:));%ä¿å­˜å‰©ä½™çš„æ•°æ®ä¸ºCé›†;
 
 %berlin-enter  46.42  knn/5 alfa/0.1 lambda/80 beta/1.5 gamma/1.0 u1/0.01
 %u2/0.001
@@ -153,7 +153,7 @@ options.gamma =0.1;
 options.u1 = 0;
 options.u2 =1;
 
-[cls,acc,A,M,obj]=myDLRTL( Ys,Xs',Xt',Yt,options,Ttest,Ttest_Label);
+[cls,acc,A,M,obj]=myTDLR( Ys,Xs',Xt',Yt,options,Ttest,Ttest_Label);
 
 myacc(i) = acc;
 end
@@ -210,10 +210,7 @@ Xt = Xt';
 %       hold on;
         box on;
       set( gca, 'XTick', [], 'YTick', [],'ZTick', [],'FontSize',17,'FontWeight','bold' );
-%legend('DGTSC(graph)','DGTSC');
     view(-20,20);
-  % xlabel('(a) Original data');
-%     xlabel('(b) JALDA');
 
 % disp(acc);
 % cnt = 0;
@@ -229,7 +226,7 @@ Xt = Xt';
 %     options.u1 = 0.01;
 %     options.u2 =u21;
 % 
-%     [cls,acc,A,M,obj]=myDLRTL( Ys,Xs',Xt',Yt,options,Ttest,Ttest_Label);
+%     [cls,acc,A,M,obj]=myTDLR( Ys,Xs',Xt',Yt,options,Ttest,Ttest_Label);
 %     macc(1,cnt) = u21;
 %     macc(2,cnt) = acc;
 % end
