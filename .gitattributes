@@ -1,5 +1,5 @@
-*.CPP linguist-language=java
+*.cpp linguist-language=MATLAB
 
-*.c linguist-language=java
+*.c linguist-language=MATLAB
 
-*.h linguist-language=java
+*.h linguist-language=MATLAB
