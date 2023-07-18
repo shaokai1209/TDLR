@@ -2,7 +2,7 @@
 
 # All datasets are available through a private link, please contact the author for any questions （shaokai1209@gmail.com）.
 
-# If you find our work helpful for you, please cite by
+# If you find our work helpful to you, please cite
 ```
 @article{li2022transferable,
   title={Transferable discriminant linear regression for cross-corpus speech emotion recognition},
